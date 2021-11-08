@@ -1,0 +1,30 @@
+.bg-primary {
+  background-color: #C5D4DB !important;
+}
+
+
+a {
+  color: $primary;
+  &:hover,
+  &:focus,
+  &:active {
+    color: darken($primary, 15%);
+  }
+}
+
+.text-primary {
+  color: $yellow !important;
+}
+
+a.yellow{
+  color: $yellow!important;
+  &:hover,
+  &focus,
+  &active {
+    color: $primary!important;
+  }
+}
+
+.text-warning {
+  color: $yellow!important;
+} 
