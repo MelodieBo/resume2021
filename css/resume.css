@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - Melodie Bouillot Resume v5.0.7 (https://startbootstrap.com/template-overviews/resume)
- * Copyright 2013-2020 Start Bootstrap
+ * Copyright 2013-2023 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
  */
 
@@ -183,7 +183,7 @@ section.resume-section .resume-item .resume-date {
 
 @media (min-width: 768px) {
   section.resume-section {
-    min-height: 100vh;
+    min-height: 60vh;
   }
   section.resume-section .resume-item .resume-date {
     min-width: 18rem;
