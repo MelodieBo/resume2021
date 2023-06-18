@@ -42,7 +42,7 @@ h3 {
 }
 
 p.lead {
-  font-size: 1.15rem;
+  font-size: 1.10rem;
   font-weight: 400;
 }
 
@@ -64,7 +64,7 @@ p.lead {
   display: inline-block;
   height: 3.5rem;
   width: 3.5rem;
-  background-color: #495057;
+  background-color: #11182b;
   color: #fff !important;
   border-radius: 100%;
   text-align: center;
@@ -78,7 +78,7 @@ p.lead {
 }
 
 .social-icons a:hover {
-  background-color: #11182b;
+  background-color: #344984 !important;
 }
 
 .dev-icons {
@@ -86,11 +86,24 @@ p.lead {
 }
 
 .dev-icons .list-inline-item i:hover {
-  color: #11182b;
+  color: #344984;
 }
 
-.link {
-  color: #C9A66B !important;
+.link, a {
+  color: #11182b !important;
+}
+
+a.link:hover {
+  color: #344984 !important;
+}
+
+.category {
+  background-color: #11182b;
+  color: #fff;
+  padding: 0.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 #sideNav {
@@ -105,6 +118,43 @@ p.lead {
 
 #sideNav .navbar-toggler:focus {
   outline-color: #787d82;
+}
+
+#sideNav .highlight {
+  position: relative;
+}
+
+#sideNav .highlight:after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  left: 65px;
+  width: 9rem;
+  height: 27px;
+  z-index: -1;
+  background-color: #344984;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  visibility: hidden;
+  -webkit-transform-origin: right;
+  transform-origin: right;
+  -webkit-transition: visibility 0s 0.4s, 0.4s -webkit-transform cubic-bezier(0, 0.01, 0, 1);
+  transition: visibility 0s 0.4s, 0.4s -webkit-transform cubic-bezier(0, 0.01, 0, 1);
+  transition: 0.4s transform cubic-bezier(0, 0.01, 0, 1), visibility 0s 0.4s;
+  transition: 0.4s transform cubic-bezier(0, 0.01, 0, 1), visibility 0s 0.4s, 0.4s -webkit-transform cubic-bezier(0, 0.01, 0, 1);
+}
+
+#sideNav .highlight:hover:after, #sideNav .highlight:focus:after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  visibility: visible;
+  -webkit-transform-origin: left;
+  transform-origin: left;
+  -webkit-transition: 0.2s -webkit-transform cubic-bezier(0, 0.01, 0, 1);
+  transition: 0.2s -webkit-transform cubic-bezier(0, 0.01, 0, 1);
+  transition: 0.2s transform cubic-bezier(0, 0.01, 0, 1);
+  transition: 0.2s transform cubic-bezier(0, 0.01, 0, 1), 0.2s -webkit-transform cubic-bezier(0, 0.01, 0, 1);
 }
 
 @media (min-width: 992px) {
@@ -172,6 +222,10 @@ p.lead {
   }
   #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
     display: block;
+    color: #fff !important;
+  }
+  #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
+    color: #d7bf99;
   }
 }
 

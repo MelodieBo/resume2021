@@ -10,6 +10,34 @@
       outline-color: lighten($primary, 15%);
     }
   }
+
+  .highlight {
+    position: relative;
+    
+    &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      bottom: 7px;
+      left: 65px;
+      width: 9rem;
+      height: 27px;
+      z-index: -1;
+      background-color: $hover;
+      transform: scaleX(0);
+      visibility: hidden;
+      transform-origin: right;
+      transition: .4s transform cubic-bezier(0,.01,0,1),visibility 0s .4s;
+    }
+    
+    &:hover:after,
+    &:focus:after {
+      transform: scaleX(1);
+      visibility: visible;
+      transform-origin: left;
+      transition: .2s transform cubic-bezier(0,.01,0,1);
+    }
+  }
 }
 
 @media (min-width: 992px) {
@@ -54,6 +82,10 @@
           display: block;
           .nav-link {
             display: block;
+            color: $white!important;
+            &:hover {
+              color: $milky;
+            }
           }
         }
       }
